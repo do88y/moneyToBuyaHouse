@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webApp.css">
+    <title>web application</title>
+</head>
+<body>
+    <div class="contents">
+        <div class="contents_inner">
+            <div name="buyHome" method="post" class="buyHome_form">
+                <h2 class="title">내 집 마련까지 얼마나 남았을까요?</h2>
+                <div class="form_group row">
+                    <label class="col form_label">달마다 저축 할 금액을 입력 해 주세요💸</label>
+                    <div class="saving_input_div">
+                        <input type="text" id="saving" required class="form_control"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></input>
+                    </div>
+                </div>
+                <div class="form_group row">
+                    <label class="col form_label">살고싶은 집의 금액을 입력하세요🏠</label>
+                    <div class="saving_input_div">
+                        <input type="text" id="home" required class="form_control"></input>
+                    </div>
+                </div>
+                <button onclick="result();" class="btn">계산하기</button>
+                <h3 id="result"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="webApp.js"></script>
